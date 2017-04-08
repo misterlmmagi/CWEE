@@ -14,9 +14,12 @@ public class Player
     private String password;
 
 
-public Player(String name, String fname, String email, String password)
+public Player(String name, String fname, String email, String password) throws DomainException
 {
-
+ setFname(fname);
+ setName(name);
+ setEmail(email);
+ setPassword(password);
 }
 
 private void setEmail(String email) throws DomainException
