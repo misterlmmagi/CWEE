@@ -40,11 +40,6 @@ public class Card {
     private Suit suit;
     private Value value;
 
-    public Card() {
-        suit = Suit.SPADES;
-        value = Value.ACE;
-    }
-
     public Card(Suit suit, Value value) throws DomainException
     {
         setSuit(suit);
