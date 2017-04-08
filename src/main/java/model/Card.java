@@ -42,7 +42,7 @@ public class Card {
 
     public Card()
     {
-        
+
     }
 
     public Card(Suit suit, Value value) throws DomainException
