@@ -49,4 +49,54 @@ private void setTotalScore(int totalScore){
     this.totalScore = totalScore;
 }
 
+private void setPassword(String password) throws DomainException
+{
+    if (password.isEmpty() || password == null)
+    {
+        throw new DomainException("Enter a password please");
+    }
 }
+
+public String getName()
+{
+    return this.name;
+}
+
+public String getFname(){
+    return this.fname;
+}
+
+public String getEmail()
+{
+    return this.email;
+}
+
+public String getPassword()
+{
+    return this.password;
+}
+
+public boolean authenticate (String email, String password) throws DomainException{
+
+    if(email.isEmpty() || email == null){
+        throw new DomainException("Enter your email address please");
+    }
+
+
+    if (password.isEmpty()|| password == null){
+        throw new DomainException("Enter your password please");
+    }
+
+    if(password.equals(this.password) && email.equals(this.email)){
+    return true;
+    }
+
+    return false;
+}
+
+public void addScore(int score){
+    this.totalScore =  this.totalScore + score;
+
+}
+}
+
