@@ -40,6 +40,11 @@ public class Card {
     private Suit suit;
     private Value value;
 
+    public Card()
+    {
+        
+    }
+
     public Card(Suit suit, Value value) throws DomainException
     {
         setSuit(suit);
