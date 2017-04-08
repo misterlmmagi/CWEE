@@ -36,17 +36,18 @@ public class Card
 
         Value(int value, String valueToText)
         {
-
+            this.value = value;
+            this.valueToText = valueToText;
         }
     };
 
     private Suit suit;
-    private int value;
+    private Value value;
 
     public Card()
     {
         suit = Suit.SPADES;
-        value = 1;
+        value = Value.ACE;
     }
 
     public Suit getSuit()
@@ -60,6 +61,15 @@ public class Card
         {
             throw new DomainException("Suit can not be null.");
         }
+        else
+        {
+            this.suit = suit;
+        }
+    }
+
+    public Value getValue()
+    {
+        return value;
     }
 
 }
