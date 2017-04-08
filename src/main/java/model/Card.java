@@ -40,63 +40,65 @@ public class Card {
     private Suit suit;
     private Value value;
 
-    public Card(Suit suit, Value value) throws DomainException
-    {
+    public Card(Suit suit, Value value) throws DomainException {
         setSuit(suit);
         setValue(value);
     }
 
-    public Suit getSuit()
-    {
+    public Suit getSuit() {
         return suit;
     }
 
-    public void setSuit(Suit suit) throws DomainException
-    {
-        if(suit == null)
+    public void setSuit(Suit suit) throws DomainException {
+        if (suit == null)
             throw new DomainException("Suit can not be null.");
         else
             this.suit = suit;
     }
 
-    public Value getValue()
-    {
+    public Value getValue() {
         return value;
     }
 
-    public void setValue(Value value) throws DomainException
-    {
-        if(value == null)
+    public void setValue(Value value) throws DomainException {
+        if (value == null)
             throw new DomainException("Value can not be null.");
         else
             this.value = value;
     }
 
-    public boolean isSameSuit(Card card)
-    {
-        if(card == null)
+    public boolean isSameSuit(Card card) {
+        if (card == null)
             return false;
-        if(card.getSuit().equals(suit))
+        if (card.getSuit().equals(suit))
             return true;
         else
             return false;
     }
 
-    public boolean isSameValue(Card card)
-    {
-        if(card == null)
+    public boolean isSameValue(Card card) {
+        if (card == null)
             return false;
-        if(card.getValue().equals(value))
+        if (card.getValue().equals(value))
             return true;
         else
             return false;
     }
 
-    public boolean isSameSuitAndLower(Card card)
-    {
-        if(card == null)
+    public boolean isSameSuitAndLower(Card card) {
+        if (card == null)
             return false;
-        if(isSameSuit(card) && card.value.value < value.value)
+        if (isSameSuit(card) && card.value.value < value.value)
+            return true;
+        else
+            return false;
+    }
+
+    public boolean isSameSuitAndHigher(Card card)
+    {
+        if (card == null)
+            return false;
+        if (isSameSuit(card) && card.value.value > value.value)
             return true;
         else
             return false;
