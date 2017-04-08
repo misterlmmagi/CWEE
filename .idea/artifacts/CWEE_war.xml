@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="CWEE:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="CWEE.war">
-      <element id="artifact" artifact-name="CWEE:war exploded" />
-    </root>
-  </artifact>
-</component>
